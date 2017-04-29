@@ -1,6 +1,11 @@
 # IslandsEngine
 
-**TODO: Add description**
+Walk through example of **Functional Web Development with Elixir OTP and Phoenix**.
+
+Nicely demonstrate how to apply `Agent` to keep state in stateless functional world.
+
+
+
 
 ## Installation
 
