@@ -37,7 +37,7 @@ defmodule IslandsEngine.Game do
     GenServer.call(game, :demo)
   end
 
-  defp get_state(game) do
+  def get_state(game) do
     GenServer.call(game, :get_state)
   end
 

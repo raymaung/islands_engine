@@ -1,6 +1,6 @@
 defmodule IslandsEngine.Main do
 
-  alias IslandsEngine.{Board, Coordinate, Island, Player}
+  alias IslandsEngine.{Game, Board, Coordinate, Island, Player}
 
   def run() do
 
@@ -24,7 +24,22 @@ defmodule IslandsEngine.Main do
     # Guess the coord
     Board.guess_coordinate(board, :a1)
     IO.puts Board.to_string(board)
+
   end
+
+  def run_game() do
+    {:ok, game} = Game.start_link("Frank")
+
+    Game.set_island_coordinates(game, :player1, :dot, [:a1])
+
+    state = Game.get_state(game)
+
+    Game.set_island_coordinates(game, :player1, :dot, [:b3])
+
+    IO.puts(Player.to_string(state.player1))
+
+  end
+
 
 end
 
